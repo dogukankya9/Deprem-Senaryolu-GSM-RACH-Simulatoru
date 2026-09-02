@@ -1,2 +1,11 @@
 # Deprem Senaryolu GSM RACH Simülatörü
-Bu proje, büyük ölçekli bir deprem sonrasında GSM şebekesinde oluşan ani trafik yükünün Random Access Channel (RACH) katmanında yarattığı çakışma problemini simüle eder. Sistem; AFAD/ambulans/itfaiye, kritik kamu altyapısı, normal vatandaş ve düşük öncelikli toplu trafik olmak üzere dört kullanıcı sınıfı tanımlar ve şebeke yüküne göre dinamik olarak değişen bir barring (erişim kısıtlama) mekanizması uygular. Çakışan paketler için exponential backoff ile tekrar deneme mantığı işletilir; sonuçlar tur bazlı olarak tabloya, grafiğe ve CSV/Excel formatında dışa aktarılabilir rapora yansıtılır. Amaç, afet anında acil hizmetlerin şebeke erişiminin nasıl korunabileceğini ve sivil trafiğin nasıl kontrollü biçimde kısıtlanabileceğini gösteren, akademik değerlendirmeye uygun bir masaüstü simülasyon aracı geliştirmektir.
+Bu proje, deprem gibi olağanüstü durumlarda GSM şebekelerinde oluşabilecek ani ve yoğun erişim trafiğini simüle etmek ve RACH (Random Access Channel) üzerindeki yükü yönetmeye yönelik bir model geliştirmektedir.
+
+Sistem; aynı anda gelen çok sayıda erişim isteğini şebeke kapasitesi, RACH çakışması, barring, kullanıcı önceliği, backoff ve timeout mekanizmalarını kullanarak değerlendirir. Şebeke yükü arttıkça barring seviyesi dinamik olarak değişir ve düşük öncelikli trafik sınırlandırılarak kritik haberleşme trafiğinin erişim şansının korunması amaçlanır.
+
+Simülasyonda AFAD, ambulans, itfaiye ve kritik kamu trafiği yüksek öncelikli; normal vatandaş trafiği ise daha düşük öncelikli olarak ele alınmaktadır. RACH çakışması yaşayan erişim istekleri backoff sürecine alınarak belirli bir süre sonra tekrar denenir.
+
+Proje ayrıca anlık şebeke yükü, RACH slot kapasitesi, başarılı erişimler, barring nedeniyle engellenen erişimler, RACH çakışmaları ve timeout değerlerini takip eder. Bunun yanında kullanıcı sınıflarına göre AFAD/kritik trafik ve normal kullanıcı başarı oranları ayrı olarak izlenebilmektedir.
+
+Projenin temel amacı
+Deprem anında GSM şebekesinin tamamen kilitlenmesini önlemek, RACH üzerindeki yoğunluğu yönetmek ve kritik haberleşme trafiğinin erişilebilirliğini artıracak bir erişim kontrol yaklaşımını simülasyon ortamında göstermek.
