@@ -1,3 +1,5 @@
+[rach_deprem_sim_v3.exe dosyasını indirmek için tıklayın](https://github.com/dogukankya9/Deprem-Senaryolu-GSM-RACH-Simulatoru/releases/latest)
+
 # Deprem Senaryolu GSM RACH Simülatörü
 Bu proje, deprem gibi olağanüstü durumlarda GSM şebekelerinde oluşabilecek ani ve yoğun erişim trafiğini simüle etmek ve RACH (Random Access Channel) üzerindeki yükü yönetmeye yönelik bir model geliştirmektedir.
 
